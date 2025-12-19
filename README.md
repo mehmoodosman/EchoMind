@@ -11,9 +11,6 @@ The core idea is:
 
 This keeps the interaction **very low effort and low cognitive load** while still giving the child agency and choice.
 
-> ⚠️ At this stage (pre-hackathon), this repository only contains the **project structure**.  
-> All functional code will be created during the hackathon to comply with the “original work” rules.
-
 ---
 
 ## 🎯 Goal
@@ -55,25 +52,6 @@ EchoMind focuses on **speed, simplicity, and visual clarity**:
    GEMINI_MODEL=gemini-1.5-flash
    ```
 
-3. **Images (optional but recommended)**
-
-   Add category images under `frontend/images/`:
-
-   ```
-   frontend/images/
-     food/
-       apple.png
-       snack.png
-     feelings/
-       calm.png
-       break.png
-     activities/
-       play.png
-       outside.png
-   ```
-
-   The app automatically pulls whatever files exist inside each folder; filenames do not need to match exactly.
-
 4. **Run Streamlit**
 
    ```bash
@@ -89,9 +67,3 @@ EchoMind focuses on **speed, simplicity, and visual clarity**:
 
 ---
 
-## 🧩 Additional Notes
-
-- If Gemini is unavailable (no key or API error), the UI falls back to safe, static phrases per category.
-- Context (location + time of day + last spoken phrase) is automatically included in prompts so Gemini can stay literal and relevant.
-- `prompts/suggestion_prompt.txt` can be edited to tweak tone/format; the Streamlit app loads it automatically when it’s non-empty.
-- This MVP intentionally skips persistent storage (e.g., Qdrant) to keep hackathon setup fast. A future iteration can re-introduce personal memory without changing the UI flow.
